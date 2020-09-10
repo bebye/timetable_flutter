@@ -22,10 +22,6 @@ Flutter/app.flx
 Flutter/app.zip
 Flutter/flutter_assets/
 Flutter/flutter_export_environment.sh
-Flutter/.last_build_id
-Flutter/Debug.xcconfig
-Flutter/Release.xcconfig
-Flutter/Profile.xcconfig
 ServiceDefinitions.json
 Runner/GeneratedPluginRegistrant.*
 
@@ -34,24 +30,3 @@ Runner/GeneratedPluginRegistrant.*
 !default.mode2v3
 !default.pbxuser
 !default.perspectivev3
-
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
-DerivedData/
-
-## Gcc Patch
-/*.gcno
-
-### Xcode Patch ###
-/Runner.xcodeproj/*
-!/Runner.xcodeproj/project.pbxproj
-!/Runner.xcodeproj/xcshareddata/
-!/Runner.xcworkspace/contents.xcworkspacedata
-/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
