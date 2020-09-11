@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timetable_flutter/common/style.dart';
 import 'package:timetable_flutter/ui/lecture_editor.dart';
 import 'package:timetable_flutter/ui/now.dart';
 import 'package:timetable_flutter/ui/timetable.dart';
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: primaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Timetable'),
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
           IconButton(
               icon: Icon(Icons.add),
               iconSize: 30.0,
-              padding: const EdgeInsets.fromLTRB(10.0, 0.0, 14.0, 0.0),
+              padding: const EdgeInsets.only(top: 14.0, bottom: 14.0),
               onPressed: () => _addClass(context))
         ],
       ),
