@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:timetable_flutter/now.dart';
+import 'package:timetable_flutter/timetable.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,11 +30,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  var _index = 0;
+  var _pageIndex = 0;
+  var _pages = [Now(), TimeTable()];
 
   void _replacePage(int index) {
     setState(() {
-      _index = index;
+      _pageIndex = index;
     });
   }
 
@@ -55,11 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: _addClass)
         ],
       ),
-      body: Container(
-
-      ),
+      body: _pages[_pageIndex],
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _index,
+          currentIndex: _pageIndex,
           onTap: (index) {
             _replacePage(index);
           },
