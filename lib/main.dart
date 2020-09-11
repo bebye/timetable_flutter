@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timetable_flutter/class_editor.dart';
 import 'package:timetable_flutter/now.dart';
 import 'package:timetable_flutter/timetable.dart';
 
@@ -29,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var _pageIndex = 0;
-  var _pages = [Now(), TimeTable()];
+  var _pages = [Now(), Timetable()];
 
   void _replacePage(int index) {
     setState(() {
@@ -37,8 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _addClass() {
-    setState(() {});
+  void _addClass(BuildContext context) {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => ClassEditor()),);
   }
 
   @override
@@ -51,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add),
               iconSize: 30.0,
               padding: const EdgeInsets.fromLTRB(10.0, 0.0, 14.0, 0.0),
-              onPressed: _addClass)
+              onPressed: () => _addClass(context))
         ],
       ),
       body: _pages[_pageIndex],

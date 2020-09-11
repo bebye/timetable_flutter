@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TimeTable extends StatelessWidget {
+class Timetable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
