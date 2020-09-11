@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
 
@@ -29,11 +27,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
+  var _index = 0;
+
+  void _replacePage(int index) {
     setState(() {
-      _counter++;
+      _index = index;
+    });
+  }
+
+  void _addClass() {
+    setState(() {
+
     });
   }
 
@@ -42,26 +47,32 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(
+              icon: Icon(Icons.add),
+              iconSize: 30.0,
+              padding: const EdgeInsets.fromLTRB(10.0, 0.0, 14.0, 0.0),
+              onPressed: _addClass)
+        ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+      body: Container(
+
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _index,
+          onTap: (index) {
+            _replacePage(index);
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.watch),
+              title: Text('Now'),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            BottomNavigationBarItem(
+              icon: Icon(Icons.apps),
+              title: Text('Table'),
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+          ]),
     );
   }
 }
