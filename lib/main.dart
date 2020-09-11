@@ -5,7 +5,6 @@ import 'package:timetable_flutter/timetable.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,7 +28,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   var _pageIndex = 0;
   var _pages = [Now(), TimeTable()];
 
@@ -40,9 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _addClass() {
-    setState(() {
-
-    });
+    setState(() {});
   }
 
   @override
