@@ -30,7 +30,7 @@ class _TimetableState extends State<Timetable> {
       Container(
         child: _buildText(text, 18.0, textColor, weight: FontWeight.bold),
         alignment: Alignment.center,
-        decoration: addBottomBorder(),
+        decoration: _addBottomBorder(),
       );
 
   Widget _buildText(String text, double size, Color color,
@@ -40,7 +40,7 @@ class _TimetableState extends State<Timetable> {
         style: TextStyle(fontSize: size, color: color, fontWeight: weight),
       );
 
-  BoxDecoration addBottomBorder({Color color = primaryColor}) => BoxDecoration(
+  BoxDecoration _addBottomBorder({Color color = primaryColor}) => BoxDecoration(
         border: Border(
             bottom: BorderSide(
           color: color,
