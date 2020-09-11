@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/lecture_editor.dart';
-import 'package:timetable_flutter/now.dart';
-import 'package:timetable_flutter/timetable.dart';
+import 'package:timetable_flutter/ui/lecture_editor.dart';
+import 'package:timetable_flutter/ui/now.dart';
+import 'package:timetable_flutter/ui/timetable.dart';
 
 void main() => runApp(MyApp());
 
