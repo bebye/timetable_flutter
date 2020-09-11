@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/class_editor.dart';
+import 'package:timetable_flutter/lecture_editor.dart';
 import 'package:timetable_flutter/now.dart';
 import 'package:timetable_flutter/timetable.dart';
 
@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _addClass(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => ClassEditor()),);
+    Navigator.push(context, MaterialPageRoute(builder: (context) => LectureEditor()),);
   }
 
   @override
