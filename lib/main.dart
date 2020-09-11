@@ -32,16 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
   var _pageIndex = 0;
   var _pages = [Now(), Timetable()];
 
-  void _replacePage(int index) {
-    setState(() {
-      _pageIndex = index;
-    });
-  }
-
-  void _addClass(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => LectureEditor()),);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,6 +61,19 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text('Table'),
             ),
           ]),
+    );
+  }
+
+  void _replacePage(int index) {
+    setState(() {
+      _pageIndex = index;
+    });
+  }
+
+  void _addClass(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => LectureEditor()),
     );
   }
 }
