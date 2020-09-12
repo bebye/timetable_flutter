@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timetable_flutter/common/extension.dart';
 import 'package:timetable_flutter/common/style/style_colors.dart';
 import 'package:timetable_flutter/common/style/style_text.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
@@ -12,11 +13,11 @@ class TimetableHeader extends StatelessWidget {
     return Row(
       children: [
         _buildHeaderItem(''),
-        _buildHeaderItem('MON'),
-        _buildHeaderItem('TUE'),
-        _buildHeaderItem('WED'),
-        _buildHeaderItem('THU'),
-        _buildHeaderItem('FRI'),
+        _buildHeaderItem(Day.mon.title()),
+        _buildHeaderItem(Day.tue.title()),
+        _buildHeaderItem(Day.wed.title()),
+        _buildHeaderItem(Day.thu.title()),
+        _buildHeaderItem(Day.fri.title()),
       ],
     );
   }
