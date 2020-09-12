@@ -15,9 +15,7 @@ class Timetable extends StatelessWidget {
     return Stack(
       children: [
         SingleChildScrollView(
-          padding: EdgeInsets.only(
-            top: headerHeight,
-          ),
+          padding: EdgeInsets.only(top: headerHeight),
           child: TimetableContent(),
         ),
         TimetableHeader(),
