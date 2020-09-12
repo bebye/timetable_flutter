@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:timetable_flutter/common/style/style_colors.dart';
 
-Widget buildText(String text, TextStyle style,
+typedef Callback = void Function();
+
+IconButton buildIconButton(Icon icon, String tooltip, Callback onPressed,
+        {double iconSize = 30.0}) =>
+    IconButton(
+      icon: icon,
+      tooltip: tooltip,
+      onPressed: onPressed,
+      iconSize: iconSize,
+    );
+
+Text buildText(String text, TextStyle style,
         {TextAlign align = TextAlign.center}) =>
     Text(text, textAlign: align, style: style);
 

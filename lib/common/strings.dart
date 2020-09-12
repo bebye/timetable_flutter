@@ -10,3 +10,7 @@ const string_wed = 'WED';
 const string_thu = 'THU';
 const string_fri = 'FRI';
 const string_class = 'Class';
+
+// Tooltip
+const string_tooltip_add = 'Add';
+const string_tooltip_complete = 'Complete';

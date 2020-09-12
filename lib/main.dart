@@ -4,6 +4,7 @@ import 'package:timetable_flutter/common/style/style_colors.dart';
 import 'package:timetable_flutter/ui/lecture_editor.dart';
 import 'package:timetable_flutter/ui/now.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
+import 'package:timetable_flutter/utils/widget_util.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,12 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '$string_title_app',
+      title: string_title_app,
       theme: ThemeData(
         primarySwatch: colorPrimary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: '$string_title_app'),
+      home: MyHomePage(title: string_title_app),
     );
   }
 }
@@ -40,11 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
         actions: [
-          IconButton(
-              icon: Icon(Icons.add),
-              iconSize: 30.0,
-              padding: const EdgeInsets.only(top: 14.0, bottom: 14.0),
-              onPressed: () => _addLecture(context))
+          buildIconButton(Icon(Icons.add), string_tooltip_add, _addLecture),
         ],
       ),
       body: _pages[_pageIndex],
@@ -56,11 +53,11 @@ class _MyHomePageState extends State<MyHomePage> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.watch),
-              title: Text('$string_title_now'),
+              title: Text(string_title_now),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.apps),
-              title: Text('$string_title_table'),
+              title: Text(string_title_table),
             ),
           ]),
     );
@@ -72,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _addLecture(BuildContext context) {
+  void _addLecture() {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => LectureEditor()),
