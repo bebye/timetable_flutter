@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: Icon(Icons.add),
               iconSize: 30.0,
               padding: const EdgeInsets.only(top: 14.0, bottom: 14.0),
-              onPressed: () => _addClass(context))
+              onPressed: () => _addLecture(context))
         ],
       ),
       body: _pages[_pageIndex],
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _addClass(BuildContext context) {
+  void _addLecture(BuildContext context) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => LectureEditor()),
