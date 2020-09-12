@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:timetable_flutter/common/style.dart';
 import 'package:timetable_flutter/ui/lecture_editor.dart';
 import 'package:timetable_flutter/ui/now.dart';
-import 'package:timetable_flutter/ui/timetable.dart';
+import 'package:timetable_flutter/ui/timetable/timetable.dart';
 
 void main() => runApp(MyApp());
 
