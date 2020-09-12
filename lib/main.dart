@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/common/style.dart';
+import 'package:timetable_flutter/common/style_colors.dart';
 import 'package:timetable_flutter/ui/lecture_editor.dart';
 import 'package:timetable_flutter/ui/now.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: primaryColor,
+        primarySwatch: colorPrimary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Timetable'),
