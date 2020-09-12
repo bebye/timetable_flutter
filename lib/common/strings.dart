@@ -1,4 +1,3 @@
-
 // Title
 const string_title_app = 'Timetable';
 const string_title_now = 'Now';
