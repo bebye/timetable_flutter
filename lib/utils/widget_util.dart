@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/common/style_colors.dart';
+import 'package:timetable_flutter/common/style/style_colors.dart';
 
-Widget buildText(String text, double size, Color color,
-        {TextAlign align = TextAlign.center,
-        FontWeight weight = FontWeight.normal}) =>
-    Text(
-      text,
-      textAlign: align,
-      style: TextStyle(fontSize: size, color: color, fontWeight: weight),
-    );
+Widget buildText(String text, TextStyle style,
+        {TextAlign align = TextAlign.center}) =>
+    Text(text, textAlign: align, style: style);
 
 BoxDecoration addBottomBorder(
         {double width = 1.0,
@@ -22,7 +17,4 @@ BoxDecoration addBottomBorder(
 
 BorderSide buildBorderSide(
         {double width = 1.0, Color borderColor = colorBorderSecondary}) =>
-    BorderSide(
-      color: borderColor,
-      width: width,
-    );
+    BorderSide(color: borderColor, width: width);

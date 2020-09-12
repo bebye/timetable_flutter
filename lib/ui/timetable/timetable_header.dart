@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/common/style_colors.dart';
+import 'package:timetable_flutter/common/style/style_colors.dart';
+import 'package:timetable_flutter/common/style/style_text.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
 import 'package:timetable_flutter/utils/widget_util.dart';
 
@@ -26,7 +27,7 @@ class TimetableHeader extends StatelessWidget {
         width: Timetable.cellWidth,
         height: Timetable.headerHeight,
         child: Center(
-          child: buildText(text, 14.0, textColor, weight: FontWeight.bold),
+          child: buildText(text, textBold14),
         ),
         decoration: addBottomBorder(
             bgColor: colorBgOnPrimary, borderColor: colorBorderPrimary),

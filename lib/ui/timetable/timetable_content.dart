@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/common/style_colors.dart';
+import 'package:timetable_flutter/common/style/style_text.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
 import 'package:timetable_flutter/utils/widget_util.dart';
 
@@ -34,8 +34,8 @@ class TimetableContent extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            buildText(title, 14.0, colorTextOnSecondary),
-            buildText(description, 12.0, colorTextSubOnSecondary),
+            buildText(title, textNormal14),
+            buildText(description, textNormal12),
           ],
         ),
         decoration: addBottomBorder(),
