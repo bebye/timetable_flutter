@@ -3,4 +3,5 @@ class Lecture {
   String name;
   int startTime;
   int endTime;
+  String location;
 }
