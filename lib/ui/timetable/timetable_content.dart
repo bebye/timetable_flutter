@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timetable_flutter/common/strings.dart';
 import 'package:timetable_flutter/common/style/style_text.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
 import 'package:timetable_flutter/utils/widget_util.dart';
@@ -19,7 +20,7 @@ class TimetableContent extends StatelessWidget {
     List<Row> rows = List<Row>();
     var time = 9;
     for (int i = 0; i < timeListSize; i++) {
-      rows.add(_buildRow('Class${i + 1}', '$time - ${++time}'));
+      rows.add(_buildRow('$string_class${i + 1}', '$time - ${++time}'));
     }
     return rows;
   }

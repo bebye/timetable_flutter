@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:timetable_flutter/common/strings.dart';
 import 'package:timetable_flutter/common/style/style_colors.dart';
 import 'package:timetable_flutter/ui/lecture_editor.dart';
 import 'package:timetable_flutter/ui/now.dart';
@@ -10,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '$string_title_app',
       theme: ThemeData(
         primarySwatch: colorPrimary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Timetable'),
+      home: MyHomePage(title: '$string_title_app'),
     );
   }
 }
@@ -55,11 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.watch),
-              title: Text('Now'),
+              title: Text('$string_title_now'),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.apps),
-              title: Text('Table'),
+              title: Text('$string_title_table'),
             ),
           ]),
     );

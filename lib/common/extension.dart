@@ -1,18 +1,20 @@
+import 'package:timetable_flutter/common/strings.dart';
+
 enum Day { mon, tue, wed, thu, fri }
 
 extension DayExtension on Day {
   String title() {
     switch (this) {
       case Day.mon:
-        return 'MON';
+        return '$string_mon';
       case Day.tue:
-        return 'TUE';
+        return '$string_tue';
       case Day.wed:
-        return 'WED';
+        return '$string_wed';
       case Day.thu:
-        return 'THU';
+        return '$string_thu';
       case Day.fri:
-        return 'FRI';
+        return '$string_fri';
       default:
         return '';
     }
