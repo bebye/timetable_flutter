@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:timetable_flutter/common/style/style_colors.dart';
 
-typedef Callback = void Function();
+typedef void Callback();
 
 IconButton buildIconButton(Icon icon, String tooltip, Callback onPressed,
         {double iconSize = 30.0}) =>
