@@ -16,6 +16,15 @@ Text buildText(String text, TextStyle style,
         {TextAlign align = TextAlign.center}) =>
     Text(text, textAlign: align, style: style);
 
+TextFormField buildTextFormField(int maxLength, InputDecoration inputDecoration,
+        FormFieldValidator<String> validator) =>
+    TextFormField(
+      maxLength: maxLength,
+      maxLines: 1,
+      decoration: inputDecoration,
+      validator: validator,
+    );
+
 BoxDecoration addBottomBorder(
         {double width = 1.0,
         Color bgColor = Colors.transparent,

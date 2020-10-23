@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:timetable_flutter/common/strings.dart';
 import 'package:timetable_flutter/common/style/style_colors.dart';
-import 'package:timetable_flutter/ui/lecture_editor.dart';
+import 'package:timetable_flutter/ui/lecture/lecture_editor.dart';
 import 'package:timetable_flutter/ui/now.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
 import 'package:timetable_flutter/utils/widget_util.dart';
