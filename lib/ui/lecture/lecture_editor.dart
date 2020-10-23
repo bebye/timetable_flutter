@@ -36,7 +36,7 @@ class _LectureEditorState extends State<LectureEditor> {
           const InputDecoration(
               icon: Icon(Icons.book),
               labelText: string_lecture_name + string_lecture_required_value,
-              hintText: string_lecture_name), (value) {
+              hintText: string_lecture_name_hint), (value) {
         return _validateLectureName(value);
       });
 
@@ -45,7 +45,7 @@ class _LectureEditorState extends State<LectureEditor> {
           const InputDecoration(
               icon: Icon(Icons.location_on),
               labelText: string_lecture_location,
-              hintText: string_lecture_name), (value) {
+              hintText: string_lecture_location_hint), (value) {
         return null;
       });
 

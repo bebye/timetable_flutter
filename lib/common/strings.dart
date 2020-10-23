@@ -18,7 +18,10 @@ const string_tooltip_add = "Add";
 const string_tooltip_complete = "Complete";
 
 // LectureEditor
-const string_lecture_name = "Lecture name";
-const string_lecture_location = "Location";
-const string_lecture_required_value = "*";
+const string_lecture_name = "Name";
+const string_lecture_name_hint = "Lecture Name";
 const string_lecture_name_validation = "Please enter the lecture name.";
+const string_lecture_required_value = "*";
+
+const string_lecture_location = "Location";
+const string_lecture_location_hint = "Lecture Location";
