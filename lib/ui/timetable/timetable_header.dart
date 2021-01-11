@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:timetable_flutter/common/extension.dart';
+import 'package:timetable_flutter/common/timetable_extension.dart';
 import 'package:timetable_flutter/common/style/style_colors.dart';
 import 'package:timetable_flutter/common/style/style_text.dart';
 import 'package:timetable_flutter/ui/timetable/timetable.dart';
